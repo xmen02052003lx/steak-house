@@ -1,0 +1,9 @@
+.available-sign {
+  color: green;
+  font-weight: bold;
+}
+
+.unavailable-sign {
+  color: red;
+  font-weight: bold;
+}

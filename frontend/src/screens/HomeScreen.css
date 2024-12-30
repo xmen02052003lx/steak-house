@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Kristi&family=Quicksand:wght@300;400;500;700&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+  font-family: "Quicksand", sans-serif;
+}
+
+.special-font {
+  font-family: "Kristi", cursive;
+}
+
+.price {
+  font-size: 17px;
+}
+
+.entry-title {
+  font-size: 97px;
+}
+
+.image-container {
+  position: relative;
+  text-align: center;
+  height: auto; /* Ensure the image maintains its aspect ratio */
+}
+
+.image-container img {
+  width: 100%;
+  /* height: auto; */
+}
+
+.centered-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.specialities {
+  font-size: 3.3em;
+  color: #2d2d2d;
+  font-weight: 300;
+}
+
+.sub-specialities {
+  font-size: 1.5em;
+  color: #2d2d2d;
+  font-weight: 500;
+}
+
+.column-with-border {
+  position: relative; /* Ensure relative positioning for absolute elements */
+}
+
+.column-with-border::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 1px; /* Adjust thickness of the line */
+  background-color: #ccc; /* Color of the vertical line */
+}
+
+.columns-with-lines {
+  margin-left: -1px; /* Adjust margin to align with borders */
+}
+
+.column-with-lines {
+  position: relative; /* Ensure relative positioning for absolute elements */
+  padding-left: 15px; /* Adjust padding for column content */
+}
+
+.column-with-lines::before,
+.column-with-lines::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px; /* Adjust thickness of the line */
+  background-color: #ccc; /* Color of the vertical line */
+}
+
+.column-with-lines::before {
+  left: 0; /* Vertical line on the left side of the column */
+}
+
+.column-with-lines::after {
+  right: 0; /* Vertical line on the right side of the column */
+}
+
+h1 {
+  margin: 0;
+}
+
+/* .custom-button {
+  background-color: #c0a58a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  border-radius: 5%;
+  width: 100%;
+  font-weight: bold;
+} */
+.custom-button {
+  z-index: 8;
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  font-family: Quicksand;
+  background-color: rgb(192, 165, 138);
+  border-radius: 3px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  visibility: inherit;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-align: left;
+  margin: 0px;
+  padding: 15px 30px;
+  min-height: 0px;
+  min-width: 0px;
+  max-height: none;
+  max-width: none;
+  opacity: 1;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  transform-origin: 50% 50% 0px;
+  box-shadow: rgb(153, 153, 153) 0px 0px 0px 0px;
+  border: none;
+  text-transform: uppercase;
+}
+.custom-button:hover {
+  background-color: #33414f;
+  transform: scale(1.05); /* Optional: Adds a slight zoom effect on hover */
+}
+
+/* .overlay {
+  position: absolute;
+  top: 0;
+  left: auto;
+  text-align: center;
+  width: 50%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+/* z-index: 1; */
+/* } */
+
+.block-superior::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+  z-index: 0;
+}
+
+.block-inferior::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 68.5%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+  z-index: 1;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
+
+/* .overlay-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+} */
+
+.tableImage {
+  width: auto;
+  height: 80vh;
+}
+
+.pink-background {
+  position: relative;
+  display: block;
+  text-align: center;
+}
+
+.pink-background::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 70%; /* Adjust the width to control the background size */
+  height: 100%; /* Adjust the height to control the background size */
+  background-color: #c5a485;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  padding: 10px; /* Adjust padding to control the size of the background color */
+  border-radius: 5px; /* Optional: Add border-radius for rounded background */
+  /* 2c2c2c */
+}
+
+.dark-background {
+  position: relative;
+  display: block;
+  text-align: center;
+}
+
+.dark-background::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 70%;
+
+  height: 100%; /* Adjust the height to control the background size */
+  background-color: #2c2c2c;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  padding: 10px; /* Adjust padding to control the size of the background color */
+  border-radius: 5px; /* Optional: Add border-radius for rounded background */
+}
+
+/* Media query for larger screens */
+@media (min-width: 769px) {
+  .image-container img {
+    width: 95%;
+    height: 85vh;
+    margin: 0 auto; /* Centers the image horizontally */
+  }
+
+  .image-container .image-inferior {
+    width: 70%;
+    height: 30vh;
+    max-height: 400px; /* Adjust max-height as needed */
+    margin: 0 auto; /* Centers the image horizontally */
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 770px) {
+  /* .entry {
+    height: 90vh;
+  } */
+  .entry-image {
+    height: 85vh;
+    width: 100%;
+    object-fit: cover;
+  }
+  .block-inferior::before {
+    width: 95%;
+  }
+  .block-superior::before {
+    width: 100%;
+  }
+
+  .column-with-border::after {
+    display: none; /* Hide the vertical line on smaller screens if needed */
+  }
+} /* Media query for smaller screens */
+@media (max-width: 1200px) {
+  .service {
+    text-align: center;
+    padding-top: 4em;
+  }
+}

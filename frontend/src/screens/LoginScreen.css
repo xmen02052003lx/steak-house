@@ -1,0 +1,15 @@
+.auth-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 769px) {
+  .auth-logo-parent {
+    position: relative;
+  }
+  /* .auth-logo {
+    position: absolute;
+    top: 3em;
+  } */
+}
