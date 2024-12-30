@@ -28,7 +28,7 @@ const BookingScreen = () => {
   const [errors, setErrors] = useState({})
   const [success, setSuccess] = useState({})
 
-  const { data: restaurant } = useGetRestaurantDetailsQuery()
+  // const { data: restaurant } = useGetRestaurantDetailsQuery()
 
   const handleChange = e => {
     const { name, value } = e.target
@@ -161,17 +161,23 @@ const BookingScreen = () => {
     return timeSlots
   }
 
-  // Update time options based on restaurant open and close times
   useEffect(() => {
-    if (restaurant?.openTime && restaurant?.closeTime) {
-      const timeSlots = generateTimeSlots(
-        restaurant.openTime,
-        restaurant.closeTime
-      )
-      setTimeOptions(timeSlots)
-      setFormData({ ...formData, time: timeSlots[0] }) // Set default time
-    }
-  }, [restaurant])
+    const timeSlots = generateTimeSlots("08:00", "22:00")
+    setTimeOptions(timeSlots)
+    setFormData(prev => ({ ...prev, time: timeSlots[0] })) // Set default time
+  }, []) // Empty dependency array ensures this runs only once
+
+  // Update time options based on restaurant open and close times
+  // useEffect(() => {
+  //   if (restaurant?.openTime && restaurant?.closeTime) {
+  //     const timeSlots = generateTimeSlots(
+  //       restaurant.openTime,
+  //       restaurant.closeTime
+  //     )
+  //     setTimeOptions(timeSlots)
+  //     setFormData({ ...formData, time: timeSlots[0] }) // Set default time
+  //   }
+  // }, [restaurant])
 
   return (
     <div className="booking-screen">
